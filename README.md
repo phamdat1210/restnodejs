@@ -10,3 +10,14 @@ https://fcm.googleapis.com/fcm/send
     Authorization
     
     key=AAAAujlq7TA:APA91bE_kXODt0NDgviY3k8Kq3FY60VGP48TTbEHUDJnMkHQaOZFFUPdJtF2rHvpjX-QvyZvpNn1OmUazfQTXf_x-byzdtPMxzWUlpM-JewlCPaKYIKoSo1v7UW4tR68k73ErFyNCUlS
+    
+    
+    let headers = !hasToken ? { 'Content-Type': 'application/json;charset=UTF-8' } : { 'Content-Type': 'application/json;charset=UTF-8', Authorization: `Bearer ${authen_token}` }
+		let configAxios
+		configAxios = {
+			url,
+			method,
+			headers,
+			data: bodyParameters,
+			timeout: environmentConfig.TIME_OUT
+		}
