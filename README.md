@@ -22,4 +22,4 @@ https://fcm.googleapis.com/fcm/send
 			timeout: environmentConfig.TIME_OUT
 		}
 
-262X0lms0SoO5XOtYFA234vHdO8_4D8uMccPT7EPzLuMUxDkH
+26At4wIrUyiJFnbUitpWEcpexyH_2xMa5kK4jxnLFZAk4vnez
