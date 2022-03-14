@@ -12,7 +12,7 @@ const bodyParser = require('body-parser')
 // initialize our express app
 const app = express();
 const httpServer = createServer(app);
-const io = new Server(httpServer, { /* options */ });
+const io = new Server(httpServer, { transports: ['websocket', 'polling'] });
 const diceListener = require('./listeners/Dice.listener')
 const userListener = require('./listeners/User.listener')
 // parse various different custom JSON types as JSON
