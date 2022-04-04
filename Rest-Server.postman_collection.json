@@ -1,0 +1,421 @@
+{
+	"info": {
+		"_postman_id": "4ef8d0e2-ff03-4274-b143-f86ff6e01976",
+		"name": "Rest-Server",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Resgiter user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"admin\",\r\n    \"name\": \"admin\",\r\n\t\"password\": \"admin@12345\",\r\n\t\"phone_number\": \"099999999\",\r\n    \"email\": \"hqltechcompany@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4001/api/v1/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"admin\",\r\n    \"password\": \"admin@1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4001/api/v1/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Tìm kiếm tất cả người dùng",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7InVzZXJuYW1lIjoiYWRtaW4ifSwiaWF0IjoxNjQ4NzgzMDY0LCJleHAiOjE2NDg4Njk0NjR9.0g8jev3d262UhqsJBOw1eevzvDZPlo1cZ0rXWY8yLy0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4001/api/v1/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"api",
+						"v1",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Tìm người dùng theo id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7InVzZXJuYW1lIjoiYWRtaW4ifSwiaWF0IjoxNjQ4NzgzMDY0LCJleHAiOjE2NDg4Njk0NjR9.0g8jev3d262UhqsJBOw1eevzvDZPlo1cZ0rXWY8yLy0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4001/api/v1/user/62466e8f84b91f19149f7bf5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"62466e8f84b91f19149f7bf5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Đổi password",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7InVzZXJuYW1lIjoiYWRtaW4ifSwiaWF0IjoxNjQ4NzgzMDY0LCJleHAiOjE2NDg4Njk0NjR9.0g8jev3d262UhqsJBOw1eevzvDZPlo1cZ0rXWY8yLy0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"62466e8f84b91f19149f7bf5\",\r\n    \"password\": \"admin@1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4001/api/v1/auth/changePassword",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"changePassword"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Tạo đơn nạp tiền",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7InVzZXJuYW1lIjoiYWRtaW4ifSwiaWF0IjoxNjQ4Nzk2NTgxLCJleHAiOjE2NDg4ODI5ODF9.QBO5d9mFlWruCae9cI0Xu-gl5bHOxqLbJzy_YOHR5v4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"money_transfer\": 3000000,\r\n    \"bank_account_number_from\": \"01211111023\",\r\n    \"bank_account_name_from\": \"ADMIN\",\r\n    \"bank_account_number_to\": \"07777123333\",\r\n    \"bank_account_name_to\": \"ADMIN TO\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4001/api/v1/transfer/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"api",
+						"v1",
+						"transfer",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Người dùng xác nhận đã gửi tiền đến admin",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7InVzZXJuYW1lIjoiYWRtaW4ifSwiaWF0IjoxNjQ4Nzk2NTgxLCJleHAiOjE2NDg4ODI5ODF9.QBO5d9mFlWruCae9cI0Xu-gl5bHOxqLbJzy_YOHR5v4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"6246ac231db20680631190cd\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4001/api/v1/transfer/confirmOrder",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"api",
+						"v1",
+						"transfer",
+						"confirmOrder"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Admin đã nạp or không chấp nhận",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7InVzZXJuYW1lIjoiYWRtaW4ifSwiaWF0IjoxNjQ4Nzk2NTgxLCJleHAiOjE2NDg4ODI5ODF9.QBO5d9mFlWruCae9cI0Xu-gl5bHOxqLbJzy_YOHR5v4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"6246ac231db20680631190cd\",\r\n    \"type\": \"confirm\",\r\n    \"version\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4001/api/v1/transfer/adminConfirmOrder",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"api",
+						"v1",
+						"transfer",
+						"adminConfirmOrder"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Rút tiền",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7InVzZXJuYW1lIjoiYWRtaW4ifSwiaWF0IjoxNjQ4OTAwNDMxLCJleHAiOjE2NDg5ODY4MzF9.U0C6o55VhktnbRoN1VIvdSlCfUI6974wY1A8gWitYHc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"money_transfer\": 200000,\r\n    \"bank_account_number_to\": \"0998811122\",\r\n    \"bank_account_name_to\": \"TRAN VAN HUNG\",\r\n    \"bank_name\": \"ViettinBank\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4001/api/v1/withdraw/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"api",
+						"v1",
+						"withdraw",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Admin xác nhận hoặc từ chối rút tiền người dùng",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7InVzZXJuYW1lIjoiYWRtaW4ifSwiaWF0IjoxNjQ4OTAwNDMxLCJleHAiOjE2NDg5ODY4MzF9.U0C6o55VhktnbRoN1VIvdSlCfUI6974wY1A8gWitYHc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"62483ac40e8c6ac473631c08\",\r\n    \"type\": \"confirm\",\r\n    \"version\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4001/api/v1/withdraw/confirmWithDraw",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"api",
+						"v1",
+						"withdraw",
+						"confirmWithDraw"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Admin xác nhận đã hoàn thành đơn rút cho người dùng",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7InVzZXJuYW1lIjoiYWRtaW4ifSwiaWF0IjoxNjQ4OTAwNDMxLCJleHAiOjE2NDg5ODY4MzF9.U0C6o55VhktnbRoN1VIvdSlCfUI6974wY1A8gWitYHc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"62483ac40e8c6ac473631c08\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4001/api/v1/withdraw/finish",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"api",
+						"v1",
+						"withdraw",
+						"finish"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
