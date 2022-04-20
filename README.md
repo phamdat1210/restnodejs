@@ -22,7 +22,7 @@ https://fcm.googleapis.com/fcm/send
 			timeout: environmentConfig.TIME_OUT
 		}
 
-272T1WHsC9qgBWEyu9EZkNGc8cT_37u11bGxgTRPpL5WpuH9n
+2832IhrA8ns9kWs8iQuamvpGkTz_5spHMSoNgy21LLhPnUSvC
 
 
 https://www.getpostman.com/collections/7b51b8f81e0a71aa0432
